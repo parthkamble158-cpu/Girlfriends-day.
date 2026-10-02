@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Favorite Person 💗</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffe4ec, #fff5f8, #ffd6e4);
+    color: #5c3042;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Floating hearts */
+.heart {
+    position: fixed;
+    bottom: -30px;
+    font-size: 22px;
+    animation: float 7s linear infinite;
+    opacity: 0.7;
+    z-index: 0;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    20% { opacity: 0.8; }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Main */
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+.small {
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: clamp(42px, 10vw, 75px);
+    color: #e94f82;
+    text-shadow: 2px 3px 0 #fff;
+}
+
+.hero p {
+    font-size: 17px;
+    margin-top: 15px;
+    line-height: 1.7;
+}
+
+.btn {
+    margin-top: 30px;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 50px;
+    background: #ed5b8b;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(237,91,139,0.3);
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+    background: #e34276;
+}
+
+/* Cards */
+section {
+    padding: 70px 15px;
+}
+
+.card {
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(8px);
+    padding: 30px;
+    margin: 25px auto;
+    border-radius: 25px;
+    max-width: 650px;
+    box-shadow: 0 10px 30px rgba(150,70,100,0.12);
+}
+
+.card h2 {
+    color: #df4779;
+    margin-bottom: 15px;
+}
+
+.card p {
+    line-height: 1.8;
+}
+
+/* Reasons */
+.reasons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.reason {
+    background: #fff;
+    padding: 20px 12px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.reason:hover {
+    transform: translateY(-7px) rotate(-1deg);
+}
+
+.reason span {
+    font-size: 30px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Letter */
+.letter {
+    text-align: left;
+    font-size: 16px;
+}
+
+/* Surprise */
+#surprise {
+    display: none;
+    animation: appear 0.8s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.big-heart {
+    font-size: 70px;
+    animation: beat 1s infinite;
+}
+
+@keyframes beat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+footer {
+    padding: 40px 15px;
+    text-align: center;
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Floating hearts -->
+<div class="heart" style="left:5%; animation-delay:0s;">💗</div>
+<div class="heart" style="left:18%; animation-delay:2s;">💕</div>
+<div class="heart" style="left:35%; animation-delay:4s;">💖</div>
+<div class="heart" style="left:55%; animation-delay:1s;">💗</div>
+<div class="heart" style="left:75%; animation-delay:3s;">💞</div>
+<div class="heart" style="left:90%; animation-delay:5s;">💓</div>
+
+<div class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="small">A LITTLE SOMETHING FOR YOU 💌</div>
+
+        <h1>Happy Girlfriend's Day 💗</h1>
+
+        <p>
+            To the girl who somehow manages to be<br>
+            cute, annoying, adorable and amazing<br>
+            all at the same time. 😭💕
+        </p>
+
+        <button class="btn" onclick="scrollToLetter()">
+            Open your surprise 💌
+        </button>
+
+    </section>
+
+
+    <!-- MESSAGE -->
+    <section>
+
+        <div class="card">
+
+            <h2>Hey You... 👀💕</h2>
+
+            <p>
+                I just wanted to make a tiny corner of the internet
+                that belongs to you.
+            </p>
+
+            <br>
+
+            <p>
+                Because you deserve more than just a
+                "Happy Girlfriend's Day" text. 🥹
+            </p>
+
+        </div>
+
+
+        <!-- REASONS -->
+        <div class="card">
+
+            <h2>Mala je tuzhya badal aavdte!!🌷</h2>
+
+            <div class="reasons">
+
+                <div class="reason">
+                    <span>🥹</span>
+                    tuzhiii smile
+                </div>
+
+                <div class="reason">
+                    <span>😂</span>
+                    Your craziness bachaaa!!
+                </div>
+
+                <div class="reason">
+                    <span>🫶</span>
+                    Your caring side!
+                </div>
+
+                <div class="reason">
+                    <span>😤</span>
+                    tuzhaa cutuu anger!!
+                </div>
+
+                <div class="reason">
+                    <span>💗</span>
+                    tu jashii ahess!!
+                </div>
+
+                <div class="reason">
+                    <span>✨</span>
+                    faktt... TUUU!!
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- LETTER -->
+        <div class="card letter" id="letter">
+
+            <h2 style="text-align:center;">
+                A Little Letter For You 💌💗
+            </h2>
+
+            <br>
+
+            <p>
+                Too <b> Mazhiii raaniii</b> 💗,
+            </p>
+
+            <br>
+
+            <p>
+                I don't think soo me tulaa kadhi hee bolloyy, but I'm really
+                happyyy thatt you're a partt of my lifee!!🌷.
+            </p>
+
+            <br>
+
+            <p>
+                tuzhyaa kadhee ekk weird superpower ahee, making
+                ordinary momentss feell speciall!!. Even aaplee random
+                conversations, cuteee bhandann and completely
+                nonsense moments,anii somehow hee memories malaa
+                mazhyaa javall nehenmii pahijee!!. 🥹
+            </p>
+
+            <br>
+
+            <p>
+                Anii haaa... kadhii kadhii tuu khupp annoying hotess. khuppp annoying.
+                😭
+                <br>
+                But unfortunately tuu!!, khupppp cuteee ahesss!!😋💗,
+                so you're stuck with me. 🤭💕
+            </p>
+
+            <br>
+
+            <p>
+                I hopee tulaa nehemii mahitt asell kii how speciall youu aree to me!!.
+            </p>
+
+            <br>
+
+            <p style="text-align:center;">
+                Happy Girlfriend's Day, beautiful. 🌷
+            </p>
+
+            <br>
+
+            <p style="text-align:center;">
+                — From someone(ofc 'someone' iss none other thann mee!! yourr bachaa😋) who's very lucky to have you 💗💗
+            </p>
+
+        </div>
+
+
+        <!-- SURPRISE BUTTON -->
+        <button class="btn" onclick="showSurprise()">
+            One last thing... 👀
+        </button>
+
+
+        <!-- SURPRISE -->
+        <div class="card" id="surprise">
+
+            <div class="big-heart">💗</div>
+
+            <h2>Okay... you found it. 😭</h2>
+
+            <br>
+
+            <p>
+                You're officially myy favoritee personn💗.
+            </p>
+
+            <br>
+
+            <p>
+                No returnss.<br>
+                No exchangess.<br>
+                No refundss. 🤭
+            </p>
+
+            <br>
+
+            <p>
+                You're stuck with me. 😋💗
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        Madee withh wayy too muchh lovee 💗<br>
+        Onlyy forr youu.
+    </footer>
+
+</div>
+
+
+<script>
+
+function scrollToLetter() {
+    document.getElementById("letter").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+function showSurprise() {
+    const surprise = document.getElementById("surprise");
+
+    surprise.style.display = "block";
+
+    surprise.scrollIntoView({
+        behavior: "smooth"
+    });
+
+    // Heart explosion
+    for (let i = 0; i < 20; i++) {
+
+        const heart = document.createElement("div");
+
+        heart.innerHTML = ["❤️","💗","💕","💖","💞"][Math.floor(Math.random()*5)];
+
+        heart.style.position = "fixed";
+        heart.style.left = "50%";
+        heart.style.top = "50%";
+        heart.style.fontSize = "25px";
+        heart.style.zIndex = "999";
+
+        document.body.appendChild(heart);
+
+        const x = (Math.random() - 0.5) * 500;
+        const y = (Math.random() - 0.5) * 500;
+
+        heart.animate([
+            {
+                transform: "translate(-50%, -50%) scale(1)",
+                opacity: 1
+            },
+            {
+                transform: `translate(${x}px, ${y}px) scale(1.5)`,
+                opacity: 0
+            }
+        ], {
+            duration: 1200,
+            easing: "ease-out"
+        });
+
+        setTimeout(() => heart.remove(), 1200);
+    }
+}
+
+</script>
+
+</body>
+</html>
